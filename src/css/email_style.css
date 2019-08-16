@@ -1,0 +1,14 @@
+#emailBox{
+  width: 500px;
+}
+
+#messageBox{
+  height: 250px;
+  width: 500px;
+}
+
+.juggernaut{
+  text-align: left;
+  /*padding = 0.00;*/
+}
+

@@ -1,0 +1,65 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- Start Navigation Bar -->
+<div id="jumbologo">
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white ">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <img id="mainlogo" src="./assets/img/LandscapeLogo.png" class="img-fluid fit-image" alt="Landscape Logo">
+    </div>
+  </nav>
+</div>
+
+<div id="navbar">
+  <nav id="navbar" class="navbar sticky-top navbar-collapse navbar-expand-sm navbar-light alert alert-secondary">
+    <div id="navbarSupportedContent">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" routerLink ="/home"><b>Home</b><span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/library"><b>Library</b></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><b>Map</b></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><b>Speech Analyzer</b></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href = "#" routerLink="/about"><b>About</b></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<!--End Navigation Bar-->
+
+<router-outlet></router-outlet>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+<div id="Help" class="container">
+    <h3><b>If you have any issues, feel free to let us know</b></h3>
+    <form method="post" name="contactform" action="contact-form-handler.php">
+        <div class="form-group">
+            <label for="userEmail">Email address</label>
+            <textarea type="email" class="form-control" id="emailBox" aria-describedby="emailInput" placeholder="Your email"></textarea>
+            <br>
+            <label for="userMessage">Message</label>
+            <textarea type="message" class="juggernaut form-control" id="messageBox" aria-describedby="emailInput" placeholder="Your message"></textarea>
+        </div>
+    
+    
+        <button id="emailButton" type="submit" class="btn btn-primary" onClick="getEmail()">Submit</button>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    </form>
+    
+    <script language="javascript">
+        var frmvalidator = new Validator("contactform");
+        frmvalidator.addValidation("userEmail","req","Please provide your name");
+        frmvalidator.addValidation("userEmail","req","Please provide your email");
+        frmvalidator.addValidation("userEmail","req","Please enter a valid email address");
+    </script>
+</div>
+<br><br>

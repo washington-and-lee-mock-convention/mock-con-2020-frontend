@@ -1,0 +1,144 @@
+<html>
+<title>Mock Convention Data</title>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Personal CSS -->
+  <link href="header_style.css" type="text/css" rel="stylesheet">
+
+  <!-- Start Navigation Bar -->
+  <div id="jumbologo">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white ">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <img id="mainlogo" src="static/img/LandscapeLogo.png" class="img-fluid fit-image" alt="Responsive image">
+      </div>
+    </nav>
+  </div>
+
+  <div id="navbar">
+    <nav id="navbar" class="navbar sticky-top navbar-collapse navbar-expand-sm navbar-light alert alert-secondary">
+      <div id="navbarSupportedContent">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="home.html"><b>Home</b><span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="javascript:void(0)"><b>Library</b></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="javascript:void(0)"><b>Map</b></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="javascript:void(0)"><b>Speech Analyzer</b></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="about.html"><b>About</b></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!--End Navigation Bar-->
+</head>
+<body>
+  <!--Serve as delimiters from the top-->
+  <div class = "container">
+    <div class = "row">
+      <div class = "col-md-4">
+        <br>
+        <br>
+        <br>
+      </div>
+      <div class = "col-md-4">
+        <br>
+        <br>
+        <br>
+      </div>
+      <div class = "col-md-4">
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+  <!--End of delimiter section-->
+
+  <!--Begin General Information Section-->
+  <div id = "About" class = "container">
+    <div class = "col-md-8">
+      <h2><b>What you'll find on this site</b></h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+           nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat
+             nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+    </div>
+    <div class = "col-md-8">
+      <h2><b>How often data is updated</b></h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+           nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat
+             nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+    </div>
+    <div class = "col-md-8">
+      <h2><b>Features to come</b></h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+           nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat
+             nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+    </div>
+  </div>
+  <!--End General Information Section-->
+
+  <!--Begin Assistance section-->
+  <div id = "Help" class = "container">
+    <p><b><h3>If you have any issues, feel free to let us know</h3></b></p>
+    <form method="post" name="contactform" action = "contact-form-handler.php">
+          <div class="form-group">
+            <label for="userEmail">Email address</label>
+            <textarea type="email" class="form-control" id="emailBox" aria-describedby="emailInput" placeholder="Your email"></textarea>
+            <br>
+            <label for="userMessage">Message</label>
+            <textarea type="message" class="juggernaut form-control" id="messageBox" aria-describedby="emailInput" placeholder="Your message"></textarea>
+          </div>
+
+
+          <button id = "emailButton" type="submit" class="btn btn-primary" onClick = "getEmail()">Submit</button>
+          <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    </form>
+ 
+    <script language="javascript">
+      var frmvalidator = new Validator("contactform");
+      frmvalidator.addValidation("userEmail","req","Please provide your name");
+      frmvalidator.addValidation("userEmail","req","Please provide your email");
+      frmvalidator.addValidation("userEmail","req","Please enter a valid email address");
+    </script>
+  </div>
+  <!--End Assistance section-->
+
+  <link href="css/header_style.css" type="text/css" rel="stylesheet">
+  <link href="css/email_style.css" type="text/css" rel="stylesheet">
+  <link href="css/sticky_navbar.css" type="text/css" rel="stylesheet">
+
+  <script src = "js/sticky_navbar.js"></script>
+  <script src = "js/validate.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+.footer {
+  background-color: deepskyblue;
+  border-top: solid 1px #c3c3c3;
+  text-align: center;
+  height: 50px;
+}
+body {
+  background-color: lightblue;
+}
+.container-fluid {
+  padding-bottom: 50px;
+}
+.fit-image {
+  width: 80%;
+  margin: auto;
+  height: 300px;
+}

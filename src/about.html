@@ -1,0 +1,129 @@
+<html>
+<title>Mock Convention Data</title>
+<head>
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Personal CSS -->
+    <link href="header_style.css" type="text/css" rel="stylesheet">
+
+    <!-- Start Navigation Bar -->
+    <div id = "jumbologo">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white ">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <img id = "mainlogo" src="static/img/LandscapeLogo.png" class="img-fluid fit-image" alt="Responsive image">
+        </div>
+      </nav>
+    </div>
+
+    <div id = "navbar">
+      <nav id = "navbar" class="navbar sticky-top navbar-collapse navbar-expand-sm navbar-light alert alert-secondary">
+        <div id="navbarSupportedContent">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="javascript:void(0)"><b>Home</b><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="javascript:void(0)"><b>Library</b></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="javascript:void(0)"><b>Map</b></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="javascript:void(0)"><b>Speech Analyzer</b></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="javascript:void(0)"><b>About</b></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!--End Navigation Bar-->
+</head>
+<body>
+  <div class = "container">
+    <div class = "col-md-7 cText">
+      <div id="header">
+        <p><b><h2>About the project...</h2></b></p>
+      </div>
+      <div id = "projectDescription">
+        <p>The purpose of this site is to provide the analysts
+          of the 27th Mock Convention of Washington and Lee University
+          a repository of information concerning the Democratic Nominee
+          for the 2020 Election. This is the first time a Mock Convention
+          has had a branch devoted to collecting the relevant data. Seeing
+          as demographic and election data is being publisehd online, it would
+          be novice to bypass such a vast resource of information. Additionally,
+          with the grand number of incubments competing for the nomination,
+          having a site that maintains an up-to-date and accurate pool of data is invaluable.
+          </p>
+      </div>
+    </div>
+    <div class = "col-md-7 cText">
+      <div id = "header">
+        <p><b><h2>Contributors</b></h2></p>
+      </div>
+      <div id = "emailList">
+        <p>If you wish to contact us directly, please refer to the
+        emails below. Or if you have a general request, then please
+        fill out the submission box at the bottom of the page. We
+        will try and get back to you as soon as possible.</p>
+
+        <ul>
+          <li>Liam McCann</li>
+          <ul><li><a href = "mailto: mccanw20@mail.wlu.edu">mccanw20@mail.wlu.edu</a></li></ul>
+          <li>Abby Nason</li>
+          <ul><li><a href = "mailto: nasona20@mail.wlu.edu">nasona20@mail.wlu.edu</a></li></ul>
+          <li>Jay Roberts</li>
+          <ul><li><a href = "mailto: robertsi20@mail.wlu.edu">robertsi20@mail.wlu.edu</a></li></ul>
+          <li>Alan Liu</li>
+          <ul><li><a href = "mailto: liur20@mail.wlu.edu">liur20@mail.wlu.edu</a></li></ul>
+          <li>Alexander Caines</li>
+          <ul><li><a href = "mailto: cainesa21@mail.wlu.edu">cainesa21@mail.wlu.edu</a></li></ul>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div id = "Help" class = "container">
+      <p>
+        <div id = "header">
+          <h3><b>If you have any issues, feel free to let us know</b></h3>
+        </div>
+      </p>
+
+      <br>
+
+      <form>
+        <div class="form-group">
+          <label for="userEmail">Email address</label>
+          <textarea type="email" class="form-control" id="emailBox" aria-describedby="emailInput" placeholder="Your email"></textarea>
+          <label for="userMessage">Message</label>
+          <textarea type="message" class="juggernaut form-control" id="messageBox" aria-describedby="emailInput" placeholder="Your message"></textarea>
+        </div>
+
+        <button id = "emailButton" type="submit" class="btn btn-primary" onClick = "getEmail()">Submit</button>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      </form>
+    </div>
+
+
+    <link href="css/header_style.css" type="text/css" rel="stylesheet">
+    <link href="css/about_style.css" type="text/css" rel="stylesheet">
+    <link href="css/sticky_navbar.css" type="text/css" rel="stylesheet">
+    <link href="css/email_style.css" type="text/css" rel="stylesheet">
+
+    <script src = "js/sticky_navbar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

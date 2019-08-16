@@ -1,0 +1,13 @@
+html, body {
+  background-color: lightblue;
+}
+
+#Help{
+  background-color: #add8e6;
+}
+
+.fit-image{
+width: 80%;
+margin: auto;
+height: 300px;
+}

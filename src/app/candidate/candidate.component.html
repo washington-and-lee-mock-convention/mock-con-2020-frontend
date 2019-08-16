@@ -1,0 +1,47 @@
+<div class = "container" style = "background-color: white">
+    <div class = "row">
+        <div class = "col-md-4 name">
+            <b>Name:</b> {{candidate.firstName}} {{candidate.lastName}}
+        </div>
+        <div class = "col-md-4 id">
+            Candidate ID
+        </div>
+        <div class = "col-md-4 ages">
+            Candidate's current age: {{candidate.age}} 
+            Age in 2024: {{candidate.age2024}}
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-md-1"></div>
+        <div class = " col-md-5 race">
+            Candidate's race: {{candidate.race}}
+        </div>
+        <div class = "col-md-5 family">
+            Candidate's family members: {{candidate.family}}
+        </div>
+        <div class = "col-md-1"></div>
+
+    </div>
+    <div class = "row">
+        <div class = "col-md-4 party">
+                Candidate's party: {{candidate.party}}
+        </div>
+        <div class = "col-md-4 ideology_score">
+                Candidate's Ideology Score: {{candidate.ideology_score}}
+        </div>
+        <div class = "col-md-4 legislation">
+                Candidate's proposed legislation:{{candidate.legislation}}
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-md-4 positions">
+                Candidate's previous elected positions: {{candidate.positions}}
+        </div>
+        <div class = "col-md-4 schooling">
+                Candidate's alma mater {{candidate.schooling}}
+        </div>
+        <div class = "col-md-4 current_job">
+                Candidate's current place of employment: {{candidate.current_job}}
+        </div>
+    </div>
+</div>
