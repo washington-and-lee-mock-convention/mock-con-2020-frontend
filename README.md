@@ -1,6 +1,12 @@
 # mock-con-2020-frontend
 Frontend for mockconventiondata.com
 
+## THIS IS THE PRODUCTION BRANCH ##
+Do not merge from anywhere except from the beta branch
+From master:
+`git checkout prod`
+`git merge beta`
+
 ## basic structure of the front-end ##
 The index.html houses the different components of the view. These components are the different pages that complete the site.
 The rest of the components exist inside of the src/app directory as is standard for most angular apps. Each component contains
