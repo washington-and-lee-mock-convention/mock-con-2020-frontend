@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./candidate.component.css']
 })
 export class CandidateComponent implements OnInit {
-  private candidate: any;
+  candidate: any;
 
   constructor(private router: ActivatedRoute, private profile: ProfilesService) { 
     this.router.params.subscribe(res =>{
