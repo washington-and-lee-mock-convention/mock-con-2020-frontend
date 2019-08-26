@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
+import { NgRedux, NgReduxModule } from '@angular-redux/store';
+import { AppState, rootreducer, INITIAL_STATE } from './store';
 
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
@@ -37,8 +39,13 @@ const appRoutes: Routes = [
     HttpModule,
     BrowserModule,
     AppRoutingModule,
+    NgReduxModule
   ],
   providers: [ProfilesService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(ngRedux: NgRedux<AppState>) {
+    ngRedux.configureStore(rootreducer, INITIAL_STATE);
+  }
+}
