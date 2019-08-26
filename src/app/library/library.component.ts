@@ -4,7 +4,7 @@ import { AppState } from '../store';
 import { FETCH_CANDIDATES } from '../constants';
 import { ProfilesService } from '../_services/profiles/profiles.service';
 import { Router } from '@angular/router';
-
+import {Actions}  from '../actions';
 
 @Component({
   selector: 'app-library',
@@ -12,11 +12,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./library.component.css']
 })
 
+//git commit -m "Made Actions accessible from library.component"
 
 export class LibraryComponent implements OnInit {
   selectedCandidate: any;
   cands = [];
-  constructor(private ngRedux: NgRedux<AppState>,private profile: ProfilesService, private router: Router) {     
+  // act: any = actions;
+  constructor(private actions: Actions, private ngRedux: NgRedux<AppState>,private profile: ProfilesService, private router: Router) {
+    this.testingRedux();
     //get candidates from server
     profile.get().subscribe(
       res => {
@@ -32,8 +35,16 @@ export class LibraryComponent implements OnInit {
 
   }
 
+  testingRedux(){
+    console.log("testing redux");
+    console.log(this.actions.getRequests().getCandidates());
+    console.log(this.getCandidates());     
+    console.log("testing ended");
+  }
+
+  //reduxjs??
   getCandidates() {
-    this.ngRedux.dispatch({type: FETCH_CANDIDATES});
+    return this.ngRedux.dispatch({type: FETCH_CANDIDATES});
   }
 
   ngOnInit() {
