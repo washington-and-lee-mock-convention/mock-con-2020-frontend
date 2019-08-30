@@ -15,6 +15,7 @@ import { CandidateComponent } from './candidate/candidate.component';
 
 import { ProfilesService } from './_services/profiles/profiles.service';
 import { RequestService } from './requests';
+import { MapComponent } from './map/map.component';
 
 const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -30,7 +31,8 @@ const appRoutes: Routes = [
     HomeComponent,
     AboutComponent,
     LibraryComponent,
-    CandidateComponent
+    CandidateComponent,
+    MapComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes,
