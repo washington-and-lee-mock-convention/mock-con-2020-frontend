@@ -6,7 +6,11 @@
             From the menu, select a candidate whose information you would like to see.
             If you refresh your candidate's page, then you must come back to this page and reselect
             them in order for you to have their information again.
-
+            <br><br>
+            On each candidate's respective page there will be information concerning their nuclear family,
+            education, demographics, partisan affiliation, current endorsers, and their former office
+            positions or relevant places of employment.
+            <br><br>
             If you would like more information about a certain candidate or candidates, then feel free
             to let us know and we will try our best to acquire the data for such an entry.
         </div>
@@ -15,17 +19,21 @@
             <table class="table overflow-auto">
                     <thead>
                         <tr>
+                            <th scope="col">&nbsp;&nbsp;</th>
                             <th scope="col">Candidate</th>
+                            <th scope="col">&nbsp;&nbsp;</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class = "candidateRow" *ngFor = "let cand of cands">
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                             <td>
                                 <!-- <span> -->
                                 <span (click)="selectedCand(cand)">
                                     <span class = "candidateName">{{cand.firstName}} {{cand.lastName}}</span>
                                 </span>
                             </td> 
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                         </tr>
                     </tbody>
             </table>
