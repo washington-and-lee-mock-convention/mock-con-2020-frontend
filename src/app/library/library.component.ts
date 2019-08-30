@@ -26,7 +26,9 @@ export class LibraryComponent implements OnInit {
         //load candidates into array
         for(let i of res){
           console.log(i);
-          this.cands.push(i);
+          if(i.firstName != null){
+            this.cands.push(i);
+          }
       }
       },
       error =>{
