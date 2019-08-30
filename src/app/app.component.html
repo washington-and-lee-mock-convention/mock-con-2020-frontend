@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <!-- Start Navigation Bar -->
 <div id="jumbologo">
-  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white ">
+  <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-light bg-white ">
     <div class="collapse navbar-collapse mainlogo" id="navbarSupportedContent">
       <img src="./assets/img/LandscapeLogoSlim.png" class="img-fluid " alt="Landscape Logo">
     </div>
@@ -9,26 +9,26 @@
 </div>
 
 <div id="navbar">
-  <nav id="navbar" class="navbar sticky-top navbar-collapse navbar-expand-sm navbar-light alert alert-secondary">
+  <nav id="navbar" class="navbar navbar-fixed-top navbar-collapse navbar-expand-sm navbar-light alert alert-secondary">
     <div id="navbarSupportedContent">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#" routerLink ="/home"><b>Home</b><span class="sr-only"></span></a>
+          <a class="nav-link home" href="#" routerLink ="/home"><b>Home</b><span class="sr-only"></span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="/library"><b>Library</b></a>
+          <a class="nav-link library" href="/library"><b>Library</b></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#" routerLink = "/map"><b>Map</b></a>
+          <a class="nav-link map" href="#" routerLink = "/map"><b>Map</b></a>
         </li>
         <!-- <li class="nav-item active">
           <a class="nav-link" href="#"><b>Speech Analyzer</b></a>
         </li> -->
-        <li class="nav-item active">
-          <a class="nav-link" href = "#" routerLink="/about"><b>About</b></a>
+        <li class="nav-item active ">
+          <a class="nav-link about" href = "#" routerLink="/about"><b>About</b></a>
         </li>
       </ul>
     </div>
@@ -39,7 +39,7 @@
 <router-outlet></router-outlet>
 <br><br><br><br><br>
 <hr>
-<div id="Help" class="container">
+<div id="Help" class="container help">
     <h3><b>If you have any issues, feel free to let us know</b></h3>
     <form method="post" name="contactform" action="contact-form-handler.php">
         <div class="form-group">
