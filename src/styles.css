@@ -3,8 +3,8 @@
     background-color: white;
     display: block;
     overflow-y: auto;
-    width: 250px;
-    height: 300px;
+    width: 275px;
+    height: 380px;
     align-content: center;
     text-align: center;
 }
@@ -13,5 +13,5 @@
     color: blue;
 }
 .candidateRow:hover{
-    background-color: rgb(209, 207, 207);
+    background-color: rgb(239, 237, 245);
 }
