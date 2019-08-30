@@ -9,16 +9,15 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class RegionService {
-
+export class PrecinctService {
   selectedCandidate: any;
-  region: any;
+  precinct: any;
   baseUrl: string;
   httpOptions = {};
   environment = {
       production: false,
       apiUrl: 'http://localhost:3000',
-      basePath:'/region',
+      basePath:'/precinct',
       environment: '@localhost'
   };
 
@@ -52,8 +51,8 @@ export class RegionService {
   getAll(): Observable<any>{
     return this.http.get(this.baseUrl).pipe(
       (res) => {
-        this.region = res;
-        return this.region;
+        this.precinct = res;
+        return this.precinct;
       }
     )
   }
