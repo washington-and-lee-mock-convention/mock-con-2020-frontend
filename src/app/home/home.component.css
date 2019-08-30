@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed');
+
+
+/*Fading text, images and buttons in*/
+.intro, .updates {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1.0s;
+    
+    /* color: rgb(88, 88, 90); */
+    /* font-size: 200%; */
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/*adding pulsing buttons*/
+.wrapper { 
+  padding: 20px;     
+} 
+
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes shadow-pulse-big {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 70px rgba(0, 0, 0, 0);
+  }
+}
+
+.btn {
+  /* float: left;
+  margin: 40px;
+  width: 130px;
+  height: 130px;
+  font: 13px/130px 'Barlow Semi Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff; */
+  text-align: center;
+  /* background: rgba(30, 144, 255, 0.6); */
+  /* border-radius: 50%; */
+  animation: shadow-pulse 3s infinite;
+}
