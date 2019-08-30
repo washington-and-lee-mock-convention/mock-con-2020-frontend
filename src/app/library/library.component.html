@@ -6,6 +6,9 @@
             From the menu, select a candidate whose information you would like to see.
             If you refresh your candidate's page, then you must come back to this page and reselect
             them in order for you to have their information again.
+
+            If you would like more information about a certain candidate or candidates, then feel free
+            to let us know and we will try our best to acquire the data for such an entry.
         </div>
         <div class = "col-md-6">
             <br>
@@ -16,7 +19,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor = "let cand of cands">
+                        <tr class = "candidateRow" *ngFor = "let cand of cands">
                             <td>
                                 <!-- <span> -->
                                 <span (click)="selectedCand(cand)">
