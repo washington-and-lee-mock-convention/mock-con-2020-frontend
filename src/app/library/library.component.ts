@@ -17,6 +17,7 @@ import {Actions}  from '../actions';
 export class LibraryComponent implements OnInit {
   selectedCandidate: any;
   cands = [];
+  public detailedPath;
   // act: any = actions;
   constructor(private actions: Actions, private ngRedux: NgRedux<AppState>,private profile: ProfilesService, private router: Router) {
     this.testingRedux();
@@ -50,6 +51,7 @@ export class LibraryComponent implements OnInit {
   }
 
   ngOnInit() {
+    // this.detailedPath = window.location.origin + "/candidate"
   }
 
   selectedCand(candy){

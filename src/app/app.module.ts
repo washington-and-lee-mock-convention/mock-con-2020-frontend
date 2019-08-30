@@ -22,6 +22,7 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'library', component: LibraryComponent},
   { path: 'candidate', component: CandidateComponent},
+  { path: 'map', component: MapComponent},
   { path: '', component: HomeComponent, pathMatch: 'full' }//pressing the home button naviagates you to the home page
 ]
 
