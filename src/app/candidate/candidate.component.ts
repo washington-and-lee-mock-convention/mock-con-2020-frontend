@@ -15,6 +15,7 @@ export class CandidateComponent implements OnInit {
     this.router.params.subscribe(res =>{
       if(this.profile.selectedCandidate){
         this.candidate = this.profile.selectedCandidate;
+        console.log(this.candidate);
       }
       else{
         this.candidate = {firstName: "reroute to library page and reselect"}

@@ -12,12 +12,14 @@ import { LibraryComponent } from './library/library.component';
 import { CandidateComponent } from './candidate/candidate.component';
 
 import { ProfilesService } from './_services/profiles/profiles.service';
+import { MapComponent } from './map/map.component';
 
 const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'home', component: HomeComponent },
   { path: 'library', component: LibraryComponent},
   { path: 'candidate', component: CandidateComponent},
+  { path: 'map', component: MapComponent},
   { path: '', component: HomeComponent, pathMatch: 'full' }//pressing the home button naviagates you to the home page
 ]
 
@@ -27,7 +29,8 @@ const appRoutes: Routes = [
     HomeComponent,
     AboutComponent,
     LibraryComponent,
-    CandidateComponent
+    CandidateComponent,
+    MapComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes,
