@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
+import { StoreModule } from '@ngrx/store';
+import { candidateReducer } from './api/candidate/candidate.reducer'
 
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
@@ -40,6 +42,7 @@ const appRoutes: Routes = [
     HttpModule,
     BrowserModule,
     AppRoutingModule,
+    StoreModule.forRoot({ candidates: candidateReducer })
   ],
   providers: [ProfilesService],
   bootstrap: [AppComponent]

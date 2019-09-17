@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ProfilesService } from '../_services/profiles/profiles.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { Candidate } from '../api/candidate/candidate.reducer'
+import { Observable } from 'rxjs';
+import { Store, select } from '@ngrx/store';
 
 
 @Component({
@@ -9,20 +11,22 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./candidate.component.css']
 })
 export class CandidateComponent implements OnInit {
-  private candidate: any;
+  private candidate: Observable<Candidate>;
 
-  constructor(private router: ActivatedRoute, private profile: ProfilesService) { 
-    this.router.params.subscribe(res =>{
-      if(this.profile.selectedCandidate){
-        this.candidate = this.profile.selectedCandidate;
-        console.log(this.candidate);
-      }
-      else{
-        this.candidate = {firstName: "reroute to library page and reselect"}
-      }
-    })
+  constructor(private router: ActivatedRoute, private store: Store<{ count: number }>) { 
+    if (store.pipe(select('candidate'))) {
+      this.candidate = store.pipe(select('candidate'));
+    }
   }
-  ngOnInit() {
-  }
+
+  ngOnInit() {}
+
+  getCandidates = () => {
+    // use http client to get candidates from path
+  };
+
+  getCandidate = (name: string) => {
+    // use http client to get candidate from path
+  };
 
 }
