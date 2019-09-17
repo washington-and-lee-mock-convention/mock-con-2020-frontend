@@ -22,9 +22,11 @@ export class ProfilesService{
         environment: '@localhost'
     };
 
+    
     //creates an instance of httpclient in http so that it can be used in our service
     constructor(private http: HttpClient){
       this.baseUrl = this.environment.apiUrl + this.environment.basePath;
+      this.headers();
     }
 
     headers(){
@@ -37,14 +39,13 @@ export class ProfilesService{
     }
 
     get(){
-    // get(id?: string){
-        this.headers();
-        // if(id == undefined){
-        //     id = 'all';
-        // }
-
-        // const url = `${this.baseUrl}/${JSON.parse(localStorage.getItem('currentUser')).restaurant.id}/campaign/${id}`;
-        return this.http.get<any>(this.baseUrl, this.httpOptions).pipe(catchError(this.errorHandler));
+      // get(id?: string){
+      this.headers();
+      // if(id == undefined){
+      //     id = 'all';
+      // }
+      // const url = `${this.baseUrl}/${JSON.parse(localStorage.getItem('currentUser')).restaurant.id}/campaign/${id}`;
+      return this.http.get<any>(this.baseUrl, this.httpOptions).pipe(catchError(this.errorHandler));
     }
 
     //for php connection?

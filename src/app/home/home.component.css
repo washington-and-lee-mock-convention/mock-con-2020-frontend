@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed');
+
+
+/*Fading text, images and buttons in*/
+.intro, .updates, .featuresToCome {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1.0s;
+    
+    /* color: rgb(88, 88, 90); */
+    /* font-size: 200%; */
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

@@ -1,14 +1,94 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed');
+
+/*map*/
+/* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+#map {
+    height: 100%;
+}
+
 .table{
     background-color: white;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    width: 300px;
-    height: 200px;
+    display: block;
+    overflow-y: auto;
+    width: 250px;
+    height: 380px;
     align-content: center;
     text-align: center;
 }
 
+.table::-webkit-scrollbar{
+    display: none;
+}
+
 .candidateName{
     color: blue;
+}
+.candidateRow:hover{
+    background-color: rgb(239, 237, 245);
+}
+
+.home:hover, .library:hover, .map:hover, .about:hover {
+    background-color: rgb(235, 236, 238);
+}
+
+
+/*Fading text, images and buttons in*/
+.mainlogo, .help, .info {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1.0s;
+    
+    /* color: rgb(88, 88, 90); */
+    /* font-size: 200%; */
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/*adding pulsing buttons*/
+.wrapper { 
+  padding: 20px;     
+} 
+
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes shadow-pulse-big {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 70px rgba(0, 0, 0, 0);
+  }
+}
+
+.btn {
+  /* float: left;
+  margin: 40px;
+  width: 130px;
+  height: 130px;
+  font: 13px/130px 'Barlow Semi Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff; */
+  text-align: center;
+  /* background: rgba(30, 144, 255, 0.6); */
+  /* border-radius: 50%; */
+  animation: shadow-pulse 3s infinite;
 }
