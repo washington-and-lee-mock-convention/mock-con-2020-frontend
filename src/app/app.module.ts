@@ -4,8 +4,6 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 
-import { Actions } from './actions';
-
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -14,7 +12,6 @@ import { LibraryComponent } from './library/library.component';
 import { CandidateComponent } from './candidate/candidate.component';
 
 import { ProfilesService } from './_services/profiles/profiles.service';
-import { RequestService } from './requests';
 import { MapComponent } from './map/map.component';
 
 const appRoutes: Routes = [
@@ -44,7 +41,7 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [ProfilesService, Actions, RequestService],
+  providers: [ProfilesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

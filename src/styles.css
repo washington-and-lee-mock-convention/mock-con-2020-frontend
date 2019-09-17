@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed');
 
+/*map*/
+/* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+#map {
+    height: 100%;
+}
 
 .table{
     background-color: white;

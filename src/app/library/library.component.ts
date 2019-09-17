@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgRedux, select } from '@angular-redux/store';
-import { AppState } from '../store';
-import { FETCH_CANDIDATES } from '../constants';
 import { ProfilesService } from '../_services/profiles/profiles.service';
 import { Router } from '@angular/router';
-import {Actions}  from '../actions';
 
 @Component({
   selector: 'app-library',
@@ -19,8 +15,7 @@ export class LibraryComponent implements OnInit {
   cands = [];
   public detailedPath;
   // act: any = actions;
-  constructor(private actions: Actions, private ngRedux: NgRedux<AppState>,private profile: ProfilesService, private router: Router) {
-    this.testingRedux();
+  constructor(private profile: ProfilesService, private router: Router) {
     //get candidates from server
     profile.get().subscribe(
       res => {
@@ -36,18 +31,6 @@ export class LibraryComponent implements OnInit {
         console.log("The server is offline");
       });
 
-  }
-
-  testingRedux(){
-    console.log("testing redux");
-    console.log(this.actions.getRequests().getCandidates());
-    console.log(this.getCandidates());     
-    console.log("testing ended");
-  }
-
-  //reduxjs??
-  getCandidates() {
-    return this.ngRedux.dispatch({type: FETCH_CANDIDATES});
   }
 
   ngOnInit() {
