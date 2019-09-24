@@ -17,19 +17,19 @@ export class LibraryComponent implements OnInit {
   // act: any = actions;
   constructor(private profile: ProfilesService, private router: Router) {
     //get candidates from server
-    profile.get().subscribe(
-      res => {
-        //load candidates into array
-        for(let i of res){
-          console.log(i);
-          if(i.firstName != null){
-            this.cands.push(i);
-          }
-      }
-      },
-      error =>{
-        console.log("The server is offline");
-      });
+    // profile.get().subscribe(
+    //   res => {
+    //     //load candidates into array
+    //     for(let i of res){
+    //       console.log(i);
+    //       if(i.firstName != null){
+    //         this.cands.push(i);
+    //       }
+    //   }
+    //   },
+    //   error =>{
+    //     console.log("The server is offline");
+    //   });
 
   }
 
@@ -37,11 +37,11 @@ export class LibraryComponent implements OnInit {
     // this.detailedPath = window.location.origin + "/candidate"
   }
 
-  selectedCand(candy){
-    this.profile.selectedCandidate = candy;
-    this.selectedCandidate = candy;
-    this.router.navigate(["/candidate"]);
+  // selectedCand(candy){
+  //   this.profile.selectedCandidate = candy;
+  //   this.selectedCandidate = candy;
+  //   this.router.navigate(["/candidate"]);
 
-  }
+  // }
 
 }
