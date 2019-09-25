@@ -16,7 +16,8 @@ import { map } from 'rxjs/operators';
 export class CandidateComponent implements OnInit {
   candidates$: Observable<any> = this.store.select(state => state.candidates);
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   private getCandidateFromJSON(json: Observable<any>) {
     Object.entries(json).forEach(keyValue => {
@@ -40,9 +41,11 @@ export class CandidateComponent implements OnInit {
   };
 
   constructor(
+    
     private store: Store<{ candidates: Candidate[] }>,
     private profileService: ProfilesService
   ) { 
+
     if (store.pipe(select('candidate'))) {
       this.candidates$ = store.pipe(select('candidate'));
     } else {
